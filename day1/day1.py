@@ -1,10 +1,7 @@
-from time import perf_counter_ns
 import os, sys
 parentdir = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 sys.path.append(parentdir)
-
 from myDecorator import time_function
-
 
 with open('./input.txt') as f:
     data = [float(line) for line in f.readlines()]
@@ -21,7 +18,6 @@ print(f"Puzzle 1: {puzzle1(data)}")
 
 def sliding_window(array):
     return [sum(array[i:i+3]) for i in range(len(array)-2)]
-
 
 @time_function
 def puzzle2(data):
@@ -46,10 +42,10 @@ def puzzle2v2(data):
 print(f"Puzzle 2: {puzzle2v2(data)}")
 
 '''
->>> Function puzzle1(*args, **kwargs): time elapsed: 0.218 [ms]
->>> Puzzle 1: 1553
->>> Function puzzle2(*args, **kwargs): time elapsed: 0.657 [ms]
->>> Puzzle 2: 1597
->>> Function puzzle2v2(*args, **kwargs): time elapsed: 0.199 [ms]
->>> Puzzle 2: 1597
+Function puzzle1(*args, **kwargs): time elapsed: 0.218 [ms]
+Puzzle 1: 1553
+Function puzzle2(*args, **kwargs): time elapsed: 0.657 [ms]
+Puzzle 2: 1597
+Function puzzle2v2(*args, **kwargs): time elapsed: 0.199 [ms]
+Puzzle 2: 1597
 '''
