@@ -17,5 +17,4 @@ if __name__ == '__main__':
     @time_function
     def test(*x, test='test', test3="vier"):
         print("This is the test function")
-    
     print(test(1, test="test"))
