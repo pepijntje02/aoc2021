@@ -33,3 +33,14 @@ if __name__ == '__main__':
     print(f"Puzzle 2: {puzzle2(data)}")
     print(f"Puzzle 2: {puzzle2v2(data)}")
     print(f"Puzzle 2: {puzzle2v3(data)}")
+
+'''
+Function puzzle1(<class 'list'>,): time elapsed: 0.400 [ms]
+Puzzle 1: 1553
+Function puzzle2(<class 'list'>,): time elapsed: 0.344 [ms]
+Puzzle 2: 1597
+Function puzzle2v2(<class 'list'>,): time elapsed: 0.244 [ms]
+Puzzle 2: 1597
+Function puzzle2v3(<class 'list'>,): time elapsed: 0.123 [ms]
+Puzzle 2: 1597
+'''
