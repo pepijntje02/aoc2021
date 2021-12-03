@@ -34,15 +34,14 @@ def puzzle2(data):
                 array.pop(i)
         if len(array) > 1:
             search_numbers(array, index+1, type=type)
+        return array[0]
     
     # copy list
-    oxygen = data.copy()
-    co2 = data.copy()
-    search_numbers(oxygen, 0)
-    search_numbers(co2, 0, 'co2')
+    oxygen = search_numbers(data.copy(), 0)
+    co2 = search_numbers(data.copy(), 0, 'co2')
 
-    oxygen = ''.join(map(str, oxygen[0]))
-    co2 = ''.join(map(str, co2[0]))
+    oxygen = ''.join(map(str, oxygen))
+    co2 = ''.join(map(str, co2))
     return int(oxygen, 2) * int(co2, 2)
 
 if __name__ == '__main__':
