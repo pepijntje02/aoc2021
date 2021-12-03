@@ -76,3 +76,10 @@ if __name__ == '__main__':
     print(f"Puzzle 1: {puzzle1(data)}")
     # Puzzle 2
     print(f"Puzzle 2: {puzzle2(data)}")
+
+'''
+Function puzzle1(<class 'list'>,): time elapsed: 0.476 [ms]
+Puzzle 1: 1692075
+Function puzzle2(<class 'list'>,): time elapsed: 0.806 [ms]
+Puzzle 2: 1749524700
+'''
