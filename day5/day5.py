@@ -74,3 +74,10 @@ if __name__ == '__main__':
     # Puzzle 2
     p2 = puzzle2(p1.lines, p1.dict)
     print(f"Puzzle 2: {p2}")
+
+'''
+Function puzzle1(<class 'list'>,): time elapsed: 52.169 [ms]
+Puzzle 1: 5092
+Function puzzle2(<class 'list'>, <class 'collections.defaultdict'>): time elapsed: 48.400 [ms]
+Puzzle 2: 20484
+'''

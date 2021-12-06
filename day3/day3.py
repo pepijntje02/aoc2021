@@ -6,7 +6,7 @@ from myDecorator import time_function
 @time_function
 def puzzle1(data):
     # Data is NxM array with integers
-    # Transform array
+    # Transpose array
     d = list(zip(*data))
     # Go over each bit and determine most common bit
     gamma = [1 if len(ele)/2 < sum(ele) else 0 for ele in d ]
@@ -19,7 +19,7 @@ def puzzle1(data):
 
 @time_function
 def puzzle2(data):
-    # Recursive function which manipulates list (does not return list) 
+    # Recursive function which manipulates list
     def search_numbers(array, index, type=None):
         # get column based on index
         temp = list(zip(*array))[index]
@@ -50,7 +50,6 @@ if __name__ == '__main__':
     # Puzzle 1
     print(f"Puzzle 1: {puzzle1(data)}")
     # Puzzle 2
-    data = [list(map(int, ele)) for ele in data]
     print(f"Puzzle 2: {puzzle2(data)}")
 
 '''
