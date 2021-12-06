@@ -1,5 +1,7 @@
 settings/*
 
+./day6/day6_tweakers.py
+
 javaScript/*
 csharp/*
 
