@@ -1,5 +1,6 @@
 import sys, pathlib
-parentdir = pathlib.Path(__file__).resolve().parents[1] # Get root direcotry AOC
+file = pathlib.Path(__file__)
+parentdir = file.resolve().parents[1] # Get root direcotry AOC
 sys.path.append(str(parentdir))
 from myDecorator import time_function
 
@@ -36,7 +37,7 @@ def puzzle2(data):
     return sum(d.values())
 
 if __name__ == '__main__':
-    with open('./input.txt') as f:
+    with open( file.parent / 'input.txt') as f:
         data = list(map(int, f.read().rstrip().split(',')))
     # Puzzle 1
     print(f"Puzzle 1: {puzzle1(data)}")

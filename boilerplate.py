@@ -1,5 +1,6 @@
 import sys, pathlib
-parentdir = pathlib.Path(__file__).resolve().parents[1] # Get root direcotry AOC
+DIR = pathlib.Path(__file__).parent
+parentdir = DIR.resolve().parent # Get root direcotry AOC
 sys.path.append(str(parentdir))
 from myDecorator import time_function
 
@@ -12,7 +13,7 @@ def puzzle2(data):
     pass
 
 if __name__ == '__main__':
-    with open('./input.txt') as f:
+    with open(DIR / 'input.txt') as f:
         data = [line.rstrip() for line in f.readlines()]
         try:
             data = list(map(float, data))
