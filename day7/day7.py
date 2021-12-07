@@ -37,7 +37,7 @@ def puzzle2(data):
     return np.sum(list(map(iter_sum,np.abs(data-t))))
 
 if __name__ == '__main__':
-    with open('input.txt') as f:
+    with open(DIR / 'input.txt') as f:
         data = list(map(int, f.read().split(',')))
     # Puzzle 1
     print(f"Puzzle 1: {puzzle1(data)}")
