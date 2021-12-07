@@ -1,3 +1,4 @@
+from functools import lru_cache
 import sys, pathlib
 DIR = pathlib.Path(__file__).parent
 parentdir = DIR.resolve().parent # Get root direcotry AOC
@@ -5,7 +6,7 @@ sys.path.append(str(parentdir))
 from myDecorator import time_function
 
 import numpy as np
-from functools import lru_cache
+from collections import Counter
 
 @time_function
 def puzzle1(data):
@@ -19,8 +20,7 @@ def puzzle1(data):
     t -= 1
     return np.sum(np.abs(data-t))
 
-
-@lru_cache
+@lru_cache(maxsize=None)
 def iter_sum(x):
     return x * (x+1) /2
 
@@ -45,8 +45,8 @@ if __name__ == '__main__':
     print(f"Puzzle 2: {puzzle2(data)}")
 
 '''
-Function puzzle1(<class 'list'>,): time elapsed: 2.967 [ms]
+Function puzzle1(<class 'list'>,): time elapsed: 2.467 [ms]
 Puzzle 1: 328262
-Function puzzle2(<class 'list'>,): time elapsed: 267.494 [ms]
+Function puzzle2(<class 'list'>,): time elapsed: 98.504 [ms]
 Puzzle 2: 90040997
 '''
