@@ -6,7 +6,7 @@ sys.path.append(str(parentdir))
 from myDecorator import time_function
 
 import numpy as np
-from collections import Counter
+from functools import lru_cache
 
 @time_function
 def puzzle1(data):
