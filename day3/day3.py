@@ -1,5 +1,5 @@
 import sys, pathlib
-parentdir = pathlib.Path(__file__).parents[1] # Get root direcotry AOC
+parentdir = pathlib.Path(__file__).resolve().parents[1] # Get root direcotry AOC
 sys.path.append(str(parentdir))
 from myDecorator import time_function
 
