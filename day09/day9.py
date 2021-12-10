@@ -89,4 +89,6 @@ Function puzzle1(<class 'list'>,): time elapsed: 190.456 [ms]
 Puzzle 1: 607
 Function puzzle2(<class 'list'>,): time elapsed: 2307.369 [ms]
 Puzzle 2: 900864
+Function puzzle2(<class 'list'>,): time elapsed: 1410.200 [ms]
+Puzzle 2: 900864
 '''
