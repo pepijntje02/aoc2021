@@ -66,10 +66,12 @@ def puzzle2(data):
     depth = dict(zip(l, data))
     check_coordinates = [k for k in depth if depth[k] != 9]
     basins = []
-    for i in range(M):
-        for j in range(N):
-            if (i,j) in check_coordinates:
-                check_in_existing_basin(i,j, basins)
+    # for i in range(M):
+    #     for j in range(N):
+    #         if (i,j) in check_coordinates:
+    #             check_in_existing_basin(i,j, basins)
+    for i,j in check_coordinates:
+        check_in_existing_basin(i, j, basins)
     return reduce(lambda x, y: x * y, sorted([len(b) for b in basins], reverse=True)[:3] )
 
 if __name__ == '__main__':
