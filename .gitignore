@@ -6,7 +6,7 @@ javaScript/*
 csharp/*
 *.jl
 *sample*
-
+*test*
 *temp*
 
 # Byte-compiled / optimized / DLL files
